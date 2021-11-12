@@ -1,0 +1,99 @@
+<form
+  class="example-form"
+  fxLayout.xs="column"
+  fxLayoutGap.xs="15px"
+  fxLayout="row"
+  fxLayoutAlign="space-between center"
+>
+  <mat-form-field class="example-full-width" appearance="outline">
+    <button class="large" mat-icon-button matPrefix>
+      <mat-icon>search</mat-icon>
+    </button>
+    <span matSuffix> </span>
+    <input
+      type="tel"
+      matInput
+      placeholder="Search"
+      name="search"
+      [(ngModel)]="search"
+    />
+  </mat-form-field>
+
+  <button
+    style="margin-bottom: 0px"
+    mat-raised-button
+    fxFlexAlign="center"
+    fxHide.xs
+    class="large-btn gray-btn"
+    (click)="filter()"
+  >
+    <mat-icon>tune</mat-icon>Filter
+  </button>
+  <button
+    mat-raised-button
+    fxFlexAlign="center"
+    fxHide.xs
+    class="large-btn pink-btn"
+    (click)="newHire()"
+  >
+    <mat-icon>add</mat-icon>New hire
+  </button>
+
+  <span
+    fxHide.gt-xs
+    fxLayout="row"
+    fxLayoutAlign="space-between center"
+    fxLayoutGap="5px"
+    class="container-btn-xs"
+  >
+    <button mat-raised-button class="large-btn gray-btn">
+      <mat-icon>tune</mat-icon>Filter
+    </button>
+    <button mat-raised-button class="large-btn pink-btn">
+      <mat-icon>add</mat-icon>New hire
+    </button>
+  </span>
+</form>
+
+<div
+  fxLayout.xs="column"
+  fxLayout="row"
+  fxLayoutAlign="space-between center"
+  fxLayoutGap="10px"
+  class="container-dropdowns"
+>
+  <span fxFlex="20" class="span-dropdowns">
+    <button mat-button [matMenuTriggerFor]="menu" class="dropdown-btn">
+      <mat-icon>date_range</mat-icon>
+      Contracts
+      <mat-icon>keyboard_arrow_down</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+  </span>
+  <span fxFlex="20" class="span-dropdowns">
+    <button mat-button [matMenuTriggerFor]="menu" class="dropdown-btn">
+      Contract type
+      <mat-icon>keyboard_arrow_down</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+  </span>
+  <span fxFlex="40" class="span-dropdowns">
+    <button mat-button class="dropdown-btn">Contract name</button>
+  </span>
+  <span fxFlex="20" class="span-dropdowns">
+    <button mat-button [matMenuTriggerFor]="menu" class="dropdown-btn">
+      Status
+      <mat-icon>keyboard_arrow_down</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+  </span>
+</div>
