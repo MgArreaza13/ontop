@@ -1,0 +1,68 @@
+a {
+  text-decoration: none;
+  color: #a1a1a1;
+}
+a:hover,
+a:active {
+  color: lightgray;
+}
+.navigation-items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+mat-toolbar {
+  border-radius: 3px;
+}
+@media (max-width: 959px) {
+  mat-toolbar {
+    border-radius: 0px;
+  }
+}
+mat-expansion-panel {
+  box-shadow: none !important;
+}
+mat-expansion-panel-header {
+  height: 80px !important;
+}
+
+.avatar {
+  width: 65px;
+  height: 65px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+.verticalLine {
+  border-left: solid #e5e5e5;
+  height: 50px;
+}
+.align-center {
+  align-items: center;
+}
+.drop-btn {
+  padding: 0;
+  color: #9c9c9c;
+  font-size: large;
+  font-weight: 500;
+}
+.drop-btn:hover {
+  color: #ff5c72;
+}
+.list-drop:hover {
+  border-bottom: 5px solid #ff5c72;
+  height: 93px;
+  display: flex;
+  align-items: center;
+  color: #ff5c72;
+}
+.responsive-toolbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.menu-btn {
+  color: #ff5c72;
+  font-size: 2rem;
+  font-weight: 600;
+}

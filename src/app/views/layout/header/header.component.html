@@ -1,0 +1,88 @@
+<mat-toolbar fxLayout="row" fxLayoutAlign="space-between center">
+  <div fxHide.gt-xs>
+    <a routerLink="/home">
+      <img src="../../../../assets/images/ontop-pink-175x51.png" alt="" />
+    </a>
+  </div>
+  <div fxHide.gt-xs>
+    <button mat-icon-button (click)="onToggleSidenav()" class="">
+      <mat-icon class="menu-btn">menu</mat-icon>
+    </button>
+  </div>
+
+  <div fxLayoutAlign="star" fxHide.xs>
+    <ul fxLayout class="navigation-items">
+      <li>
+        <a routerLink="/home">
+          <img src="../../../../assets/images/ontop-pink-175x51.png" alt="" />
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div fxFlex fxLayout fxLayoutAlign="center" fxHide.xs>
+    <ul fxLayout fxLayoutGap="20px" class="navigation-items align-center">
+      <li class="list-drop">
+        <button mat-button [matMenuTriggerFor]="menu" class="drop-btn">
+          <mat-icon>perm_identity</mat-icon>
+          Contracts
+          <mat-icon>keyboard_arrow_down</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Item 1</button>
+          <button mat-menu-item>Item 2</button>
+        </mat-menu>
+      </li>
+      <li class="list-drop">
+        <button mat-button [matMenuTriggerFor]="menu" class="drop-btn">
+          <mat-icon>description</mat-icon>
+          Documents
+          <mat-icon>keyboard_arrow_down</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Item 1</button>
+          <button mat-menu-item>Item 2</button>
+        </mat-menu>
+      </li>
+      <li class="list-drop">
+        <button mat-button [matMenuTriggerFor]="menu" class="drop-btn">
+          <mat-icon>payment</mat-icon>
+          Payout
+          <mat-icon>keyboard_arrow_down</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Item 1</button>
+          <button mat-menu-item>Item 2</button>
+        </mat-menu>
+      </li>
+      <li class="list-drop">
+        <button mat-button [matMenuTriggerFor]="menu" class="drop-btn">
+          <mat-icon>date_range</mat-icon>
+          Time
+          <mat-icon>keyboard_arrow_down</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Item 1</button>
+          <button mat-menu-item>Item 2</button>
+        </mat-menu>
+      </li>
+    </ul>
+  </div>
+  <div fxLayoutAlign="end" fxHide.xs>
+    <ul fxLayout class="navigation-items align-center">
+      <mat-divider [vertical]="true" class="verticalLine"></mat-divider>
+      <li>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-description>
+              <img
+                src="https://cdn.dribbble.com/users/1040983/screenshots/5630845/media/e95768b82810699dfd54512ff570954a.png?compress=1&resize=400x300"
+                alt="avatar"
+                class="avatar"
+              />
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+        </mat-expansion-panel>
+      </li>
+    </ul>
+  </div>
+</mat-toolbar>
